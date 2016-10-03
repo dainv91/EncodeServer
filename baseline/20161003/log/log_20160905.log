@@ -1,0 +1,184 @@
+2016-09-05 03:46:43_Nums of params: 4
+2016-09-05 03:46:43_	Param: /var/www/html/vscms2/upload/
+2016-09-05 03:46:43_	Param: /var/www/html/vscms2/stream/
+2016-09-05 03:46:43_	Param: ~/script/v2/ffmpeg_transcode.sh
+2016-09-05 03:46:43_	Param: 6790
+2016-09-05 03:46:43_Nums of params: 1
+2016-09-05 03:46:43_	Param: 6790
+2016-09-05 03:46:43_Server key started...
+2016-09-05 03:46:43_Process file: minh.mp4
+2016-09-05 03:46:43_Video file name is invalid...minh.mp4
+2016-09-05 03:46:43_Folder...
+2016-09-05 03:46:53_Process file: minh.mp4
+2016-09-05 03:46:53_Video file name is invalid...minh.mp4
+2016-09-05 03:46:53_Folder...
+2016-09-05 03:47:03_Process file: minh.mp4
+2016-09-05 03:47:03_Video file name is invalid...minh.mp4
+2016-09-05 03:47:03_Folder...
+2016-09-05 03:47:13_Process file: minh.mp4
+2016-09-05 03:47:13_Video file name is invalid...minh.mp4
+2016-09-05 03:47:13_Folder...
+2016-09-05 03:47:23_Process file: minh.mp4
+2016-09-05 03:47:23_Video file name is invalid...minh.mp4
+2016-09-05 03:47:23_Folder...
+2016-09-05 03:47:33_Process file: minh.mp4
+2016-09-05 03:47:33_Video file name is invalid...minh.mp4
+2016-09-05 03:47:33_Folder...
+2016-09-05 03:47:43_Process file: minh.mp4
+2016-09-05 03:47:43_Video file name is invalid...minh.mp4
+2016-09-05 03:47:43_Folder...
+2016-09-05 03:47:53_Process file: minh.mp4
+2016-09-05 03:47:53_Video file name is invalid...minh.mp4
+2016-09-05 03:47:53_Folder...
+2016-09-05 03:48:03_Process file: minh.mp4
+2016-09-05 03:48:03_Video file name is invalid...minh.mp4
+2016-09-05 03:48:03_Folder...
+2016-09-05 03:48:13_Process file: minh.mp4
+2016-09-05 03:48:13_Video file name is invalid...minh.mp4
+2016-09-05 03:48:13_Folder...
+2016-09-05 03:48:13_Process file: 6790_minh.mp4
+2016-09-05 03:48:15_exit value: 0
+2016-09-05 03:48:15_/var/www/html/vscms2/upload/process/6790_minh.mp4===GET_VIDEO_INFO__true
+2016-09-05 03:48:15_exit value: 0
+2016-09-05 03:48:15_Result of : ~/script/v2/ffmpeg_get_info.sh /var/www/html/vscms2/upload/process/6790_minh.mp4
+2016-09-05 03:48:15_inet.encode.bean.VideoInfoUsingFFProbe@3b2c2e8b
+2016-09-05 03:48:15_===========================================
+2016-09-05 03:48:15_BIT_RATE: 1278
+2016-09-05 03:48:15_COMMAND: ~/script/v2/ffmpeg_transcode.sh process/6790_minh.mp4 /var/www/html/vscms2/stream/minh/68/6790/ 480 &>> 6790.log
+2016-09-05 03:48:15_==============={"status":"START","height":0,"videos":"{\"720p\":\"minh/68/6790/720.mp4\",\"360p\":\"minh/68/6790/360.mp4\",\"240p\":\"minh/68/6790/240.mp4\",\"480p\":\"minh/68/6790/480.mp4\"}","out_folder":"minh/68/6790/","thumb_count":0,"bit_rate":0,"width":0,"duration":0,"id":6790,"size":0}
+2016-09-05 03:48:15_-------Process here
+2016-09-05 03:48:15_URL callback: http://210.211.99.29:6061/index.php/video/api?auth=8B6DCA2F&id=6790
+2016-09-05 03:48:15_Callback param: {"status":"START","height":0,"videos":"{\"720p\":\"minh/68/6790/720.mp4\",\"360p\":\"minh/68/6790/360.mp4\",\"240p\":\"minh/68/6790/240.mp4\",\"480p\":\"minh/68/6790/480.mp4\"}","out_folder":"minh/68/6790/","thumb_count":0,"bit_rate":0,"width":0,"duration":0,"id":6790,"size":0}
+2016-09-05 03:48:15_Callback result: <pre>exception &#039;yii\base\InvalidRouteException&#039; with message &#039;Unable to resolve the request: site/error&#039; in /var/www/html/vscms2/vendor/yiisoft/yii2/base/Controller.php:122Stack trace:#0 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller-&gt;runAction(&#039;error&#039;, Array)#1 /var/www/html/vscms2/vendor/yiisoft/yii2/web/ErrorHandler.php(80): yii\base\Module-&gt;runAction(&#039;site/error&#039;)#2 /var/www/html/vscms2/vendor/yiisoft/yii2/base/ErrorHandler.php(95): yii\web\ErrorHandler-&gt;renderException(Object(yii\web\NotFoundHttpException))#3 [internal function]: yii\base\ErrorHandler-&gt;handleException(Object(yii\web\NotFoundHttpException))#4 {main}Previous exception:exception &#039;yii\web\NotFoundHttpException&#039; with message &#039;The requested page does not exist.&#039; in /var/www/html/vscms2/backend/controllers/VideoController.php:500Stack trace:#0 /var/www/html/vscms2/backend/controllers/VideoController.php(995): backend\controllers\VideoController-&gt;findModel(&#039;6790&#039;)#1 [internal function]: backend\controllers\VideoController-&gt;actionApi()#2 /var/www/html/vscms2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)#3 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction-&gt;runWithParams(Array)#4 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller-&gt;runAction(&#039;api&#039;, Array)#5 /var/www/html/vscms2/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module-&gt;runAction(&#039;video/api&#039;, Array)#6 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application-&gt;handleRequest(Object(yii\web\Request))#7 /var/www/html/vscms2/backend/web/index.php(21): yii\base\Application-&gt;run()#8 {main}</pre>
+2016-09-05 03:48:23_Process file: minh.mp4
+2016-09-05 03:48:23_Video file name is invalid...minh.mp4
+2016-09-05 03:48:23_Folder...
+2016-09-05 03:48:27_exit value: 0---cmd: ~/script/v2/ffmpeg_transcode.sh process/6790_minh.mp4 /var/www/html/vscms2/stream/minh/68/6790/ 480 &>> 6790.log
+2016-09-05 03:48:27_
+2016-09-05 03:48:27_Start call callback from here...
+2016-09-05 03:48:27_exit value: 0
+2016-09-05 03:48:27_COMMAND: ~/script/v2/create_key_file.sh minh/68/6790/   EXEC_RESPONSE: true
+2016-09-05 03:48:27_----Str---FINISH
+2016-09-05 03:48:27_URL callback: http://210.211.99.29:6061/index.php/video/api?auth=8B6DCA2F&id=6790
+2016-09-05 03:48:27_Callback param: {"status":"FINISH","height":0,"thumb_count":0,"bit_rate":0,"width":0,"duration":0,"id":6790,"size":0}
+2016-09-05 03:48:27_Callback result: <pre>exception &#039;yii\base\InvalidRouteException&#039; with message &#039;Unable to resolve the request: site/error&#039; in /var/www/html/vscms2/vendor/yiisoft/yii2/base/Controller.php:122Stack trace:#0 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller-&gt;runAction(&#039;error&#039;, Array)#1 /var/www/html/vscms2/vendor/yiisoft/yii2/web/ErrorHandler.php(80): yii\base\Module-&gt;runAction(&#039;site/error&#039;)#2 /var/www/html/vscms2/vendor/yiisoft/yii2/base/ErrorHandler.php(95): yii\web\ErrorHandler-&gt;renderException(Object(yii\web\NotFoundHttpException))#3 [internal function]: yii\base\ErrorHandler-&gt;handleException(Object(yii\web\NotFoundHttpException))#4 {main}Previous exception:exception &#039;yii\web\NotFoundHttpException&#039; with message &#039;The requested page does not exist.&#039; in /var/www/html/vscms2/backend/controllers/VideoController.php:500Stack trace:#0 /var/www/html/vscms2/backend/controllers/VideoController.php(995): backend\controllers\VideoController-&gt;findModel(&#039;6790&#039;)#1 [internal function]: backend\controllers\VideoController-&gt;actionApi()#2 /var/www/html/vscms2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)#3 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction-&gt;runWithParams(Array)#4 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller-&gt;runAction(&#039;api&#039;, Array)#5 /var/www/html/vscms2/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module-&gt;runAction(&#039;video/api&#039;, Array)#6 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application-&gt;handleRequest(Object(yii\web\Request))#7 /var/www/html/vscms2/backend/web/index.php(21): yii\base\Application-&gt;run()#8 {main}</pre>
+2016-09-05 03:48:33_Process file: minh.mp4
+2016-09-05 03:48:33_Video file name is invalid...minh.mp4
+2016-09-05 03:48:33_Folder...
+2016-09-05 03:48:43_Process file: minh.mp4
+2016-09-05 03:48:43_Video file name is invalid...minh.mp4
+2016-09-05 03:48:43_Folder...
+2016-09-05 03:48:53_Process file: minh.mp4
+2016-09-05 03:48:53_Video file name is invalid...minh.mp4
+2016-09-05 03:48:53_Folder...
+2016-09-05 03:49:03_Process file: minh.mp4
+2016-09-05 03:49:03_Video file name is invalid...minh.mp4
+2016-09-05 03:49:03_Folder...
+2016-09-05 03:49:13_Process file: minh.mp4
+2016-09-05 03:49:13_Video file name is invalid...minh.mp4
+2016-09-05 03:49:13_Folder...
+2016-09-05 03:49:23_Process file: minh.mp4
+2016-09-05 03:49:23_Video file name is invalid...minh.mp4
+2016-09-05 03:49:23_Folder...
+2016-09-05 03:49:33_Process file: minh.mp4
+2016-09-05 03:49:33_Video file name is invalid...minh.mp4
+2016-09-05 03:49:33_Folder...
+2016-09-05 03:49:43_Process file: minh.mp4
+2016-09-05 03:49:43_Video file name is invalid...minh.mp4
+2016-09-05 03:49:43_Folder...
+2016-09-05 03:49:53_Process file: minh.mp4
+2016-09-05 03:49:53_Video file name is invalid...minh.mp4
+2016-09-05 03:49:53_Folder...
+2016-09-05 03:49:53_Process file: 6790_minh.mp4
+2016-09-05 03:49:53_Existed: /var/www/html/vscms2/stream/minh/68/6790/
+2016-09-05 03:49:54_exit value: 0
+2016-09-05 03:49:54_/var/www/html/vscms2/upload/process/6790_minh.mp4===GET_VIDEO_INFO__true
+2016-09-05 03:49:54_exit value: 0
+2016-09-05 03:49:54_Result of : ~/script/v2/ffmpeg_get_info.sh /var/www/html/vscms2/upload/process/6790_minh.mp4
+2016-09-05 03:49:54_inet.encode.bean.VideoInfoUsingFFProbe@573d95cd
+2016-09-05 03:49:54_===========================================
+2016-09-05 03:49:54_BIT_RATE: 1278
+2016-09-05 03:49:54_COMMAND: ~/script/v2/ffmpeg_transcode.sh process/6790_minh.mp4 /var/www/html/vscms2/stream/minh/68/6790/ 480 &>> 6790.log
+2016-09-05 03:49:54_==============={"status":"START","height":0,"videos":"{\"720p\":\"minh/68/6790/720.mp4\",\"360p\":\"minh/68/6790/360.mp4\",\"240p\":\"minh/68/6790/240.mp4\",\"480p\":\"minh/68/6790/480.mp4\"}","out_folder":"minh/68/6790/","thumb_count":0,"bit_rate":0,"width":0,"duration":0,"id":6790,"size":0}
+2016-09-05 03:49:54_-------Process here
+2016-09-05 03:49:54_URL callback: http://210.211.99.29:6061/index.php/video/api?auth=8B6DCA2F&id=6790
+2016-09-05 03:49:54_Callback param: {"status":"START","height":0,"videos":"{\"720p\":\"minh/68/6790/720.mp4\",\"360p\":\"minh/68/6790/360.mp4\",\"240p\":\"minh/68/6790/240.mp4\",\"480p\":\"minh/68/6790/480.mp4\"}","out_folder":"minh/68/6790/","thumb_count":0,"bit_rate":0,"width":0,"duration":0,"id":6790,"size":0}
+2016-09-05 03:49:54_Callback result: <pre>exception &#039;yii\base\InvalidRouteException&#039; with message &#039;Unable to resolve the request: site/error&#039; in /var/www/html/vscms2/vendor/yiisoft/yii2/base/Controller.php:122Stack trace:#0 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller-&gt;runAction(&#039;error&#039;, Array)#1 /var/www/html/vscms2/vendor/yiisoft/yii2/web/ErrorHandler.php(80): yii\base\Module-&gt;runAction(&#039;site/error&#039;)#2 /var/www/html/vscms2/vendor/yiisoft/yii2/base/ErrorHandler.php(95): yii\web\ErrorHandler-&gt;renderException(Object(yii\web\NotFoundHttpException))#3 [internal function]: yii\base\ErrorHandler-&gt;handleException(Object(yii\web\NotFoundHttpException))#4 {main}Previous exception:exception &#039;yii\web\NotFoundHttpException&#039; with message &#039;The requested page does not exist.&#039; in /var/www/html/vscms2/backend/controllers/VideoController.php:500Stack trace:#0 /var/www/html/vscms2/backend/controllers/VideoController.php(995): backend\controllers\VideoController-&gt;findModel(&#039;6790&#039;)#1 [internal function]: backend\controllers\VideoController-&gt;actionApi()#2 /var/www/html/vscms2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)#3 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction-&gt;runWithParams(Array)#4 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller-&gt;runAction(&#039;api&#039;, Array)#5 /var/www/html/vscms2/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module-&gt;runAction(&#039;video/api&#039;, Array)#6 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application-&gt;handleRequest(Object(yii\web\Request))#7 /var/www/html/vscms2/backend/web/index.php(21): yii\base\Application-&gt;run()#8 {main}</pre>
+2016-09-05 03:49:58_VIDEO INFO: 
+----------------------------
+2016-09-05 03:49:58_frame= 2265 fps=0.0 q=0.0 Lsize=N/A time=00:01:30.94 bitrate=N/A    
+2016-09-05 03:49:58_------------------------------------------
+2016-09-05 03:50:00_VIDEO INFO: 
+----------------------------
+2016-09-05 03:50:00_frame= 2265 fps=0.0 q=0.0 Lsize=N/A time=00:01:30.94 bitrate=N/A    
+2016-09-05 03:50:00_------------------------------------------
+2016-09-05 03:50:02_VIDEO INFO: 
+----------------------------
+2016-09-05 03:50:02_frame= 2265 fps=0.0 q=0.0 Lsize=N/A time=00:01:30.94 bitrate=N/A    
+2016-09-05 03:50:02_------------------------------------------
+2016-09-05 03:50:02_VIDEO INFO: 
+----------------------------
+2016-09-05 03:50:02_frame= 2265 fps=0.0 q=0.0 Lsize=N/A time=00:01:30.94 bitrate=N/A    
+2016-09-05 03:50:02_------------------------------------------
+2016-09-05 03:50:03_Process file: minh.mp4
+2016-09-05 03:50:03_Video file name is invalid...minh.mp4
+2016-09-05 03:50:03_Folder...
+2016-09-05 03:50:04_VIDEO INFO: 
+----------------------------
+2016-09-05 03:50:04_frame= 2265 fps=0.0 q=0.0 Lsize=N/A time=00:01:30.94 bitrate=N/A    
+2016-09-05 03:50:04_------------------------------------------
+2016-09-05 03:50:05_VIDEO INFO: 
+----------------------------
+2016-09-05 03:50:05_frame= 2265 fps=0.0 q=0.0 Lsize=N/A time=00:01:30.94 bitrate=N/A    
+2016-09-05 03:50:05_------------------------------------------
+2016-09-05 03:50:07_exit value: 0---cmd: ~/script/v2/ffmpeg_transcode.sh process/6790_minh.mp4 /var/www/html/vscms2/stream/minh/68/6790/ 480 &>> 6790.log
+2016-09-05 03:50:07_
+2016-09-05 03:50:07_Start call callback from here...
+2016-09-05 03:50:07_exit value: 0
+2016-09-05 03:50:07_COMMAND: ~/script/v2/create_key_file.sh minh/68/6790/   EXEC_RESPONSE: true
+2016-09-05 03:50:07_----Str---FINISH
+2016-09-05 03:50:07_URL callback: http://210.211.99.29:6061/index.php/video/api?auth=8B6DCA2F&id=6790
+2016-09-05 03:50:07_Callback param: {"status":"FINISH","height":0,"thumb_count":0,"bit_rate":0,"width":0,"duration":0,"id":6790,"size":0}
+2016-09-05 03:50:07_Callback result: <pre>exception &#039;yii\base\InvalidRouteException&#039; with message &#039;Unable to resolve the request: site/error&#039; in /var/www/html/vscms2/vendor/yiisoft/yii2/base/Controller.php:122Stack trace:#0 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller-&gt;runAction(&#039;error&#039;, Array)#1 /var/www/html/vscms2/vendor/yiisoft/yii2/web/ErrorHandler.php(80): yii\base\Module-&gt;runAction(&#039;site/error&#039;)#2 /var/www/html/vscms2/vendor/yiisoft/yii2/base/ErrorHandler.php(95): yii\web\ErrorHandler-&gt;renderException(Object(yii\web\NotFoundHttpException))#3 [internal function]: yii\base\ErrorHandler-&gt;handleException(Object(yii\web\NotFoundHttpException))#4 {main}Previous exception:exception &#039;yii\web\NotFoundHttpException&#039; with message &#039;The requested page does not exist.&#039; in /var/www/html/vscms2/backend/controllers/VideoController.php:500Stack trace:#0 /var/www/html/vscms2/backend/controllers/VideoController.php(995): backend\controllers\VideoController-&gt;findModel(&#039;6790&#039;)#1 [internal function]: backend\controllers\VideoController-&gt;actionApi()#2 /var/www/html/vscms2/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)#3 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction-&gt;runWithParams(Array)#4 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller-&gt;runAction(&#039;api&#039;, Array)#5 /var/www/html/vscms2/vendor/yiisoft/yii2/web/Application.php(83): yii\base\Module-&gt;runAction(&#039;video/api&#039;, Array)#6 /var/www/html/vscms2/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application-&gt;handleRequest(Object(yii\web\Request))#7 /var/www/html/vscms2/backend/web/index.php(21): yii\base\Application-&gt;run()#8 {main}</pre>
+2016-09-05 03:50:13_Process file: minh.mp4
+2016-09-05 03:50:13_Video file name is invalid...minh.mp4
+2016-09-05 03:50:13_Folder...
+2016-09-05 03:50:23_Process file: minh.mp4
+2016-09-05 03:50:23_Video file name is invalid...minh.mp4
+2016-09-05 03:50:23_Folder...
+2016-09-05 03:50:33_Process file: minh.mp4
+2016-09-05 03:50:33_Video file name is invalid...minh.mp4
+2016-09-05 03:50:33_Folder...
+2016-09-05 03:50:43_Process file: minh.mp4
+2016-09-05 03:50:43_Video file name is invalid...minh.mp4
+2016-09-05 03:50:43_Folder...
+2016-09-05 03:50:53_Process file: minh.mp4
+2016-09-05 03:50:53_Video file name is invalid...minh.mp4
+2016-09-05 03:50:53_Folder...
+2016-09-05 03:51:03_Process file: minh.mp4
+2016-09-05 03:51:03_Video file name is invalid...minh.mp4
+2016-09-05 03:51:03_Folder...
+2016-09-05 03:51:13_Process file: minh.mp4
+2016-09-05 03:51:13_Video file name is invalid...minh.mp4
+2016-09-05 03:51:13_Folder...
+2016-09-05 03:51:23_Process file: minh.mp4
+2016-09-05 03:51:23_Video file name is invalid...minh.mp4
+2016-09-05 03:51:23_Folder...
+2016-09-05 03:51:33_Process file: minh.mp4
+2016-09-05 03:51:33_Video file name is invalid...minh.mp4
+2016-09-05 03:51:33_Folder...
+2016-09-05 03:51:43_Process file: minh.mp4
+2016-09-05 03:51:43_Video file name is invalid...minh.mp4
+2016-09-05 03:51:43_Folder...
+2016-09-05 03:51:53_Process file: minh.mp4
+2016-09-05 03:51:53_Video file name is invalid...minh.mp4
+2016-09-05 03:51:53_Folder...
+2016-09-05 03:52:03_Process file: minh.mp4
+2016-09-05 03:52:03_Video file name is invalid...minh.mp4
+2016-09-05 03:52:03_Folder...
+2016-09-05 03:52:13_Process file: minh.mp4
+2016-09-05 03:52:13_Video file name is invalid...minh.mp4
+2016-09-05 03:52:13_Folder...
+2016-09-05 03:52:23_Process file: minh.mp4
+2016-09-05 03:52:23_Video file name is invalid...minh.mp4
+2016-09-05 03:52:23_Folder...
