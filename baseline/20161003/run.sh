@@ -16,4 +16,4 @@ MONITOR_SERVER_PORT=6790
 INPUT_FILE_TO_TEST="$1"
 
 #/opt/java/jdk1.8.0_102/bin/java -cp .:'EncodeServer.jar':'lib/gson-2.7.jar':'lib/commons-io-2.5.jar' inet.encode.Test "$INPUT_FILE_TO_TEST" &>>${LOG_FILE} &
-/opt/java/jdk1.8.0_102/bin/java -cp .:'EncodeServer.jar':'lib/gson-2.7.jar':'lib/commons-io-2.5.jar' inet.encode.Encoder "$INPUT_FOLDER_TO_SCAN" "$OUTPUT_FOLDER_ROOT_WITH_SLASH" "$SCRIPT_TRANSCODE_VIDEO" "$MONITOR_SERVER_PORT" &>>${LOG_FILE} &
+/opt/java/jdk1.8.0_102/bin/java -cp .:'encode_server.jar':'lib/gson-2.7.jar':'lib/commons-io-2.5.jar' inet.encode.Encoder "$INPUT_FOLDER_TO_SCAN" "$OUTPUT_FOLDER_ROOT_WITH_SLASH" "$SCRIPT_TRANSCODE_VIDEO" "$MONITOR_SERVER_PORT" &>>${LOG_FILE} &
