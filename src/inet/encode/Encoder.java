@@ -227,9 +227,10 @@ public class Encoder {
 
     private static void handleWhenEncodeError(String idStr, String channel) {
         Logger.log("CANNOT_GET_VIDEO_INFO_" + idStr + "----" + channel);
+        callApi(idStr, "ERROR");
     }
 
-    private static VideoEncodeInfo getVideoEncodeInfo(String idStr, String relativeFileNameWithExtMoved) {
+    private static VideoEncodeInfo getVideoEncodeInfoObj(String idStr, String relativeFileNameWithExtMoved) {
         int id = 0;
         try {
             id = Integer.parseInt(idStr);
@@ -266,7 +267,7 @@ public class Encoder {
         if (id == 0) {
             return result;
         }
-        VideoEncodeInfo info = getVideoEncodeInfo(idStr, relativeFileNameWithExtMoved);
+        VideoEncodeInfo info = getVideoEncodeInfoObj(idStr, relativeFileNameWithExtMoved);
         if (info == null) {
             Logger.log("Invalid video info");
         } else {
@@ -579,7 +580,7 @@ public class Encoder {
             //Logger.log("-------Process here");
             sendInfo((VideoInfoJson) info);
         } else if (info instanceof String) {
-            Logger.log("----Str---" + info + "");
+            Logger.log("----Str---" + info + "====" + idStr);
             VideoInfoJson obj = new VideoInfoJson();
             int id = 0;
             try {
@@ -589,6 +590,7 @@ public class Encoder {
             }
             if (id == 0) {
                 Logger.log("**************Invalid id************");
+                return;
             }
             obj.setId(id);
             obj.setStatus(info + "");
