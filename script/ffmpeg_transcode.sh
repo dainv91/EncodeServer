@@ -131,6 +131,11 @@ function read_all_file_and_create_key(){
 	done <<< "$result"
 }
 
+function empty_output_folder_before_encode(){
+    output_folder_with_slash="$1"
+    rm -rf "$output_folder_with_slash"*
+}
+
 function encode_video(){
 	input_file="$1"
 	output_folder_with_slash="$2"
@@ -138,6 +143,8 @@ function encode_video(){
 	q_video="$3"
 	_result=""
 	
+        empty_output_folder_before_encode "$output_folder_with_slash"
+
 	file_name="$(basename ${input_file})"
 	file_name_without_ext="${file_name%.*}"
 	file_name="${file_name_without_ext}.mp4"
