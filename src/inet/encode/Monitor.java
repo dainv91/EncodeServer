@@ -20,6 +20,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.util.Collection;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import org.apache.commons.io.FileUtils;
 
 /**
@@ -66,6 +68,9 @@ public class Monitor {
     private static void createContext() {
         server.createContext("/monitor", new MonitorHandler());
         server.createContext("/delete", new DeleteVideoHandler());
+        
+        server.createContext("/handler", new KeyHandler());
+        server.createContext("/change_key", new ChangeKeyHandler());
     }
 
     public static void main(String[] args) {
@@ -311,5 +316,100 @@ public class Monitor {
             he.close();
         }
 
+    }
+
+    static class KeyHandler extends MyHandler {
+
+        @Override
+        public void handle(HttpExchange he) throws IOException {
+            boolean isValid = IS_VALID;
+            if (!isValid) {
+                addResponseHeader(he);
+                he.sendResponseHeaders(403, 0);
+                return;
+            }
+            Headers headers = he.getResponseHeaders();
+            headers.add("Content-Type", "binary/octet-stream");
+            headers.add("Pragma", "no-cache");
+            //String keyStr = "DE51A7254739C0EDF1DCE13BBB308FF0";
+
+            String query = he.getRequestURI().getQuery();
+            java.util.Map<String, String> queries = StringUtil.queryToMap(query);
+
+            String app = queries.get(PARAM_APP);
+            if (StringUtil.isEmpty(app)) {
+                app = DEFAULT_APP;
+            }
+            String key = LIST_KEY_BY_APP.get(app);
+            if (key == null) {
+                key = KEY;
+            }
+
+            String keyStr = key;
+            int len = keyStr.length() / 2;
+            byte[] keyBuffer = new byte[len];
+
+            for (int i = 0; i < len; i++) {
+                try {
+                    keyBuffer[i] = (byte) Integer.parseInt(keyStr.substring(i * 2, (i * 2) + 2), 16);
+                } catch (Exception ex) {
+                    Logger.log(ex);
+                }
+            }
+            Logger.log("Key response:_" + keyStr + "----" + new String(keyBuffer));
+            addResponseHeader(he);
+            he.sendResponseHeaders(200, keyBuffer.length);
+            try (OutputStream outs = he.getResponseBody()) {
+                outs.write(keyBuffer);
+                outs.flush();
+            }
+        }
+
+    }
+
+    static class ChangeKeyHandler extends MyHandler {
+
+        @Override
+        public void handle(HttpExchange he) throws IOException {
+            String method = he.getRequestMethod();
+            Logger.log("METHOD: " + method);
+            if (method.equalsIgnoreCase(METHOD_GET)) {
+                String query = he.getRequestURI().getQuery();
+                java.util.Map<String, String> queries = StringUtil.queryToMap(query);
+                String key = queries.get(PARAM_KEY);
+                if (!StringUtil.isEmpty(key)) {
+                    KEY = key;
+                    String app = queries.get(PARAM_APP);
+                    if (StringUtil.isEmpty(app)) {
+                        app = DEFAULT_APP;
+                    }
+                    LIST_KEY_BY_APP.put(app, key);
+                }
+            } else if (method.equalsIgnoreCase(METHOD_POST)) {
+                //InputStream is = he.getRequestBody();
+                //Map<String, String> queries = HttpRequestUtil.readParamFromInputStream(is);
+            }
+            String response = "OK";
+            addResponseHeader(he);
+            he.sendResponseHeaders(200, response.getBytes().length);
+            try (OutputStream outs = he.getResponseBody()) {
+                outs.write(response.getBytes());
+                outs.flush();
+            }
+        }
+
+    }
+
+    static abstract class MyHandler implements HttpHandler {
+
+        static boolean IS_VALID = true;
+        static String KEY = "CBD2133A519B098ED9EAD88BCA45AEFA";
+        static final String DEFAULT_APP = "iphim.vn";
+
+        static final String PARAM_KEY = "key";
+        static final String PARAM_APP = "app";
+
+        // app - key
+        static final Map<String, String> LIST_KEY_BY_APP = new ConcurrentHashMap();
     }
 }
