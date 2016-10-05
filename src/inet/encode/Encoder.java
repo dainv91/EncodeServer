@@ -385,7 +385,6 @@ public class Encoder {
         processArgs(args);
         //Monitor.startMonitorServer(MONITOR_SERVER_PORT_STR);
         MonitorAdapter.startMonitorWithKeyServer(MONITOR_SERVER_PORT_STR);
-        //test();
         final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
         future = executorService.scheduleAtFixedRate(new Runnable() {
             @Override
