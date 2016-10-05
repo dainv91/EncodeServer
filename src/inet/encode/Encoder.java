@@ -46,6 +46,9 @@ public class Encoder {
     public static boolean RUNNING = true;
     public static int TIME_CYCLE_SCAN_IN_SEC = 10;
 
+    public static String KEY_STORE_PATH = null;
+    public static String KEY_STORE_PASS_PHRASE = null;
+
     //public static int num = 1;
     private static ScheduledFuture<?> future = null;
 
@@ -195,6 +198,16 @@ public class Encoder {
         String monitorServerPortStr = configs.get("MONITOR_SERVER_PORT_STR");
         if (!StringUtil.isEmpty(monitorServerPortStr)) {
             MONITOR_SERVER_PORT_STR = monitorServerPortStr;
+        }
+
+        String keystorePath = configs.get("KEY_STORE_PATH");
+        if (!StringUtil.isEmpty(keystorePath)) {
+            KEY_STORE_PATH = keystorePath;
+        }
+
+        String keystorePassPhrase = configs.get("KEY_STORE_PASS_PHRASE");
+        if (!StringUtil.isEmpty(keystorePassPhrase)) {
+            KEY_STORE_PASS_PHRASE = keystorePassPhrase;
         }
 
     }
@@ -370,7 +383,8 @@ public class Encoder {
         INPUT_FOLDER_TO_SCAN = "/var/www/html/vscms2/upload/";
         OUTPUT_FOLDER_ROOT_WITH_SLASH = "/var/www/html/vscms2/upload/output/";
         processArgs(args);
-        Monitor.startMonitorServer(MONITOR_SERVER_PORT_STR);
+        //Monitor.startMonitorServer(MONITOR_SERVER_PORT_STR);
+        MonitorAdapter.startMonitorWithKeyServer(MONITOR_SERVER_PORT_STR);
         //test();
         final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
         future = executorService.scheduleAtFixedRate(new Runnable() {
