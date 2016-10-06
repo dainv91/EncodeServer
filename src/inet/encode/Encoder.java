@@ -378,8 +378,6 @@ public class Encoder {
     }
 
     public static void main(String[] args) {
-        //INPUT_FOLDER_TO_SCAN = "D:\\tmps\\scan\\input\\";
-        //OUTPUT_FOLDER_ROOT_WITH_SLASH = "D:\\tmps\\scan\\output\\";
         INPUT_FOLDER_TO_SCAN = "/var/www/html/vscms2/upload/";
         OUTPUT_FOLDER_ROOT_WITH_SLASH = "/var/www/html/vscms2/upload/output/";
         processArgs(args);
