@@ -50,6 +50,7 @@ public class Monitor {
             //String options = " <OUTPUT_FOLDER_ROOT_WITH_SLASH> <SHELL_COMMAND_TRANSCODE_VIDEO>";
             String options = " <MONITOR_SERVER_PORT>";
             Logger.log("Using java " + Monitor.class.getName() + options);
+            // Add from web
         } else {
             Logger.log("Nums of params: " + args.length);
             for (String str : args) {
