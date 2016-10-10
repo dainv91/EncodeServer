@@ -161,6 +161,12 @@ public class Encoder {
         if (!StringUtil.isEmpty(shellCmdTranscodeVideo)) {
             SHELL_COMMAND_TRANSCODE_VIDEO = shellCmdTranscodeVideo;
         }
+
+        String shellCmdGetVideoInfo = configs.get("SHELL_COMMAND_GET_INFO_VIDEO");
+        if (!StringUtil.isEmpty(shellCmdGetVideoInfo)) {
+            SHELL_COMMAND_GET_INFO_VIDEO = shellCmdGetVideoInfo;
+        }
+
         String apiCmsCallback = configs.get(("API_CMS_CALLBACK"));
         if (!StringUtil.isEmpty(apiCmsCallback)) {
             API_CMS_CALLBACK = apiCmsCallback;
