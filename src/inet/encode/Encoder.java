@@ -33,7 +33,7 @@ import java.util.concurrent.TimeUnit;
 public class Encoder {
 
     private static final String CONFIG_FILE_PATH = "conf/encoder.conf";
-    private static String MONITOR_SERVER_PORT_STR = "6790";
+    public static String MONITOR_SERVER_PORT_STR = "6790";
 
     private static String API_CMS_CALLBACK = "http://210.211.99.29:6061/index.php/video/api?auth=8B6DCA2F";
     private static final String PARAM_VIDEO_INFO = "encode";
@@ -150,7 +150,7 @@ public class Encoder {
         return result;
     }
 
-    private static void readConfigFile() {
+    public static void readConfigFile() {
         Map<String, String> configs = FileUtil.readConfigFile(CONFIG_FILE_PATH);
 
         String shellCmdCreateKeyFile = configs.get("SHELL_COMMAND_CREATE_KEY_FILE");

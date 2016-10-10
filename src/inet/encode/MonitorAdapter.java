@@ -12,7 +12,7 @@ import inet.util.StringUtil;
  * @author dainv
  */
 public class MonitorAdapter {
-    
+
     public static void startMonitorWithKeyServer(String monitorPortStr) {
         if (StringUtil.isEmpty(Encoder.KEY_STORE_PATH)) {
             // Start http
@@ -24,6 +24,7 @@ public class MonitorAdapter {
     }
 
     public static void main(String[] args) {
-        startMonitorWithKeyServer("6790");
+        Encoder.readConfigFile();
+        startMonitorWithKeyServer(Encoder.MONITOR_SERVER_PORT_STR);
     }
 }
